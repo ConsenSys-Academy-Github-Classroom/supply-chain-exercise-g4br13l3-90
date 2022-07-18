@@ -56,7 +56,7 @@ contract SupplyChain {
     }
 
     modifier paidEnough(uint _price) {
-        require(msg.value >= _price);
+        require(msg.value >= _price, "invalid opcode");
         _;
     }
 
